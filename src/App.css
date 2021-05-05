@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Goblin+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Goblin+One&family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Goblin+One&family=Itim&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Goblin+One&family=Itim&family=Montserrat&display=swap');
+.App{
+  margin: 80px auto;
+  width: 85%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .furniture{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  /* background-color: black; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .furniture .imageside{
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
+}
+.arrows{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 40%;
+  transform: translateY(-40%);
+}
+.arrows .arrow{
+  margin: 2px;
+  width: 30px;
+  height: 30px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .8);
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.App .furniture .imageside .dp{
+  width: 100%;
+  margin-bottom: 10px;
 }
+.App .furniture .imageside .imagelist{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.App .furniture .imageside .imagelist img{
+  height: 60px;
+  object-fit: cover;
+}
+.App .furniture .contentside{
+  width: 45%;
+}
+.App .furniture .contentside h1{
+  font-family: 'DM Serif Text', serif;
+}
+.App .furniture .contentside h4{
+  width: 450px;
+  font-weight: 400;
+  font-family: 'Itim', cursive;
+  color: rgba(0, 0, 0, .7);
+}
+.App .furniture .contentside p{
+  color: rgba(0, 0, 0, .7);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+.App .furniture .contentside p.submit{
+text-decoration: underline;
+}
+.App .furniture .contentside .stars{
+  margin-bottom: 0px;
+}
+.App .furniture .contentside .review{
+  margin-top: 3px;
+}
+.App .furniture .contentside .review span{
+  color: #1DFFCE;
+}
+.App .furniture .contentside .rupees{
+  font-size: 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.App .furniture .contentside .dispatch{
+  margin-top: 30px;
+}
+.App .furniture .contentside .buttons button{
+  text-transform: uppercase;
+  padding: 13px 35px;
+  border: 1px solid rgba(0, 0, 0, .9);
+  background-color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.App .furniture .contentside .buttons .cart{
+  background-color: rgba(0, 0, 0, .9);
+  color: #fff;
+}
+.App .info{
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+}
+.App .info .item{
+  width: 30%;
+  display: flex;
+}
+.App .info .item div{
+}
+.App .info .item i{
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.App .info .item div h4,.App .info .item div p{
+  margin: 0;
+  color: rgba(0, 0, 0, .7);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+}
+.App .info .item div h4{
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Itim', cursive;
+  color: rgba(0, 0, 0, .8);
+  margin-bottom: 10px;
+}
+@media (max-width:1330px){
+  .App .furniture .imageside .imagelist img{
+    height: 70px;
+    object-fit: cover;
   }
-  to {
-    transform: rotate(360deg);
+.App .furniture{
+  flex-direction: column;
+}
+.App .furniture .imageside{
+  width: 100%;
+}
+.App .furniture .contentside{
+  width: 100%;
+}
+.App .info{
+  width: 100%;
+  justify-content: space-between;
+}
+.App .info .item{
+  width: 40%;
+  margin-top: 20px;
+}
+}
+@media (max-width:680px) {
+  .App{
+    width:95%;
+    margin-top: 20px;
   }
+  .App .furniture .imageside .imagelist img{
+    height: 40px;
+  }
+}
+@media (max-width:480px) {
+.App .info{
+  flex-direction: column;
+}
+.App .info .item{
+  width: 100%;
+}
+.App .furniture .contentside h4{
+  width: 300px;
+} 
+.App .furniture .contentside .buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.App .furniture .contentside .buttons button{
+  padding:15px 0;
+  width: 45%;
+  font-size: .9em;
+}
 }
